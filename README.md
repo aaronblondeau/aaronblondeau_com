@@ -6,7 +6,7 @@ Powered by [11ty](https://www.11ty.dev)
 
 ```
 npm install
-npm run dev
+npm run serve
 ```
 
 ## Build

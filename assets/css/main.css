@@ -2643,6 +2643,13 @@ input, select, textarea {
 			width: 6.25em;
 		}
 
+		#header {
+			overflow-y: scroll;
+		}
+		#header .header-links {
+			justify-content: end;
+		}
+
 /* Footer */
 
 	#footer .icons {
