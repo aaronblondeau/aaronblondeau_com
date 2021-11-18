@@ -1,0 +1,77 @@
+---
+title: Aaron Blondeau
+---
+
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="icon" type="image/png"  href="/assets/images/aaron_blondeau_profile_picture_256.jpg">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/" class="image avatar"><img src="/assets/images/aaron_blondeau_profile_picture_256.jpg" alt="" /></a>
+					<h1><strong>I am Aaron Blondeau.</strong><br />
+                    I create software.<br />
+					I co-founded <a href="https://terraquest.com/" target="_blank">TerraQuest</a>.<br />
+                    I love to run.</h1>
+				</div>
+
+        <div>
+          <ul class="actions header-links">
+            <li><a href="/" class="">Home</a></li>
+            <li><a href="/blog" class="">Blog</a></li>
+          </ul>
+        </div>
+			</header>
+
+		<!-- Main -->
+			<div id="main" class="blog_post">
+
+        {% if cover %}
+        <div>
+          <img src="{{ cover }}" style="max-width: 300px;" />
+        </div>
+        {% endif %}
+
+        <h1>{{ title }}</h1>
+
+        {{ content | safe }}
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/aaronblondeau" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.strava.com/athletes/29488486" target="_blank" class="icon brands fa-strava"><span class="label">Strava</span></a></li>
+						<li><a href="mailto:aaronblondeau@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2021</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
