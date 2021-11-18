@@ -18,4 +18,5 @@ npm run build
 ## Notes
 
 https://www.markdownguide.org/basic-syntax/
+
 https://mozilla.github.io/nunjucks/templating.html
