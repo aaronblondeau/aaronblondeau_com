@@ -50,7 +50,8 @@ title: Aaron Blondeau
 					<section id="two">
 						<h2>Posts</h2>
 						<div class="row">
-                            {% for post in collections.post.slice(0, 6) %}
+                            {% for post in collections.post | reverse %}
+							{% if loop.index0 < 6 %}
                             <article class="col-6 col-12-xsmall work-item">
                                 {% if post.data.cover %}
 								<a href="{{ post.url }}" class="image fit thumb"><img src="{{ post.data.cover }}" alt="" /></a>
@@ -58,6 +59,7 @@ title: Aaron Blondeau
 								<a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
 								<p>{{ post.data.teaser }}</p>
 							</article>
+							{% endif %}
                             {% endfor %}
 						</div>
 						<ul class="actions">

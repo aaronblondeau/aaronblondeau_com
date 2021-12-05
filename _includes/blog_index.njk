@@ -44,7 +44,7 @@ title: Blog
 					<section id="two">
 						<h2>All Posts</h2>
 						<div class="row">
-                            {% for post in collections.post %}
+                            {% for post in collections.post | reverse %}
                             <article class="col-6 col-12-xsmall work-item">
                                 {% if post.data.cover %}
 								<a href="{{ post.url }}" class="image fit thumb"><img src="{{ post.data.cover }}" alt="" /></a>
