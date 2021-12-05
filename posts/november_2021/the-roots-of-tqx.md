@@ -4,6 +4,7 @@ tags: ['post', 'technology']
 title: The Roots of TQX 
 teaser: The sole purpose for TQX is to reward ordinary people for preventing carbon from being released into the atmosphere.
 cover: /assets/images/tqx.jpg
+date: 2021-11-21
 ---
 I started researching cryptocurrencies in December of 2020.  It started because I had a fear of missing out (FOMO).  I quickly realized that fear of missing out, hype and all sorts of other negative things drive much of the crypto world.  The basic idea behind blockchain is so simple and powerful, how could it have all turned into such a gigantic mess?
 

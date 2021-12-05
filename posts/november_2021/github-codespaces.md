@@ -4,6 +4,7 @@ tags: ['post', 'technology']
 title: GitHub Codespaces
 teaser: Running a Python project on a M1 Mac?  Not going to happen.  Codespaces to the rescue!
 cover: /assets/images/codespaces.jpg
+date: 2021-12-05
 ---
 I've been using [VSCode devcontainers](https://code.visualstudio.com/docs/remote/containers) for quite a while in order to quickly onboard new team members.
 You can hand them the repo, show them how to open the project in the devcontainer, send over a few credentials and they're up and running.

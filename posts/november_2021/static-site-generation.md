@@ -4,6 +4,7 @@ tags: ['post', 'technology']
 title: Creating My New Site With 11ty
 teaser: Even the smallest projects can be derailed from the start by hidden complexity.
 cover: /assets/images/11ty.jpg
+date: 2021-11-28
 ---
 I had a budget of about 6 hours to create my new website.  First thing I did was outline these requirements:
 
