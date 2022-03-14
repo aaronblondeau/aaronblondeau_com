@@ -5,14 +5,14 @@ Powered by [11ty](https://www.11ty.dev)
 ## Dev
 
 ```
-npm install
-npm run serve
+yarn install
+yarn serve
 ```
 
 ## Build
 
 ```
-npm run build
+yarn build
 ```
 
 ## Notes

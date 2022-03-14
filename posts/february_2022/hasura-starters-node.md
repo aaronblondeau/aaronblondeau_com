@@ -18,4 +18,4 @@ Hasura has proven to be quite the opposite:
 - In exchange for setting up tables in your database, Hasura will gift you a fast and secure API that just works.
 - It is easy to extend with [events](https://hasura.io/docs/latest/graphql/core/event-triggers/index.html), [custom actions](https://hasura.io/docs/latest/graphql/core/actions/index.html), or even [other apis](https://hasura.io/docs/latest/graphql/core/remote-schemas/index.html).
 
-Since I will certainly be using Hasura again, I am working on building out some starter projects for Node and .NET.  The Node.js version is coming together and can be found [here](https://github.com/aaronblondeau/node_starters/tree/master/node).
+Since I will certainly be using Hasura again, I am working on building out some starter projects for Node and .NET.  The Node.js version is coming together and can be found [here](https://github.com/aaronblondeau/hasura_starters/tree/master/node).
