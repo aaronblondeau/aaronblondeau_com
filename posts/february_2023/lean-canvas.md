@@ -9,7 +9,7 @@ date: 2023-02-27
 
 I like writing code so much that I have rarely stopped to think about how I am spending my time. As long as the technology is challenging, I love to just dive into projects. However, I only have so many coding hours left in my life so I better start spending them more wisely.
 
-My first experience with a lean canvas was not good. There was a tight deadline. My collaborator was overcompliating the process, and there was a lot of pressure to make a questionable idea look good. I did not enjoy making that lean canvas so I did not consider using the process again.
+My first experience with a lean canvas was not good. There was a tight deadline. My collaborator was over complicating the process, and there was a lot of pressure to make a questionable idea look good. I did not enjoy making that lean canvas so I did not consider using the process again.
 
 Fortunately, I recently attended a startup workshop where a got some excellent lean canvas training. The workshop gave me a fresh look at the process and how simple and informative it could be.
 
