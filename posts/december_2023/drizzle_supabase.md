@@ -9,9 +9,9 @@ date: 2023-12-16
 
 I tried to write this blog post last week but got extremely frustrated and quit.
 
-It was a case of Deno strikes again. Well, not Deno itself, but the lack of good packages available for it. I swear everytime I've gone to use Deno I've been blocked by the same issue of some package I need not being available or being disfunctional.
+It was a case of Deno strikes again. Well, not Deno itself, but the lack of good packages available for it. I swear every time I've gone to use Deno I've been blocked by the same issue of some package I need not being available or being dysfunctional.
 
-Take the Drizzle package for example : https://deno.land/x/drizzle@v0.23.85. **Does not work.** In the back of my mind I knew it wasn't going to work because there is a really obvious mistake in the first example on their readme ("postgres" import vs "pg" usage). Even though I knew it was gonna be crap I still spent about 3 hours trying to troubleshoot it.
+Take the Drizzle package for example : [https://deno.land/x/drizzle@v0.23.85](https://deno.land/x/drizzle@v0.23.85). **Does not work.** In the back of my mind I knew it wasn't going to work because there is a really obvious mistake in the first example on their readme ("postgres" import vs "pg" usage). Even though I knew it was gonna be crap I still spent about 3 hours trying to troubleshoot it.
 
 The past several times I've evaluated Supabase I've also reached the same stopping point. Everything is great and I'd love to build an app on this platform, but not if I have to fight with Deno imports all day long. Sure I could just host Node.js somewhere else, but that's like towing a wagon behind your minivan. Lame! Because of the lack of npm imports and a few other minor issues I've passed on Supabase and used Hasura with Node.js for all my builds.
 
