@@ -9,7 +9,7 @@ date: 2023-12-15
 
 I have been working really hard to reduce the amount of things I have to know. I'd love to identify and be highly proficient in just a handful of tools that give an individual developer broad powers over technology landscape. For me, right now that set of tools looks like this:
 
-- Hasura + Node.js for backend (inlcudes Mino for S3 storage, and custom JWT code for auth)
+- Hasura + Node.js for backend (includes Mino for S3 storage, and custom JWT code for auth)
 - Vue.js + Quasar for frontend
 - Capacitor (via Quasar) for mobile
 
@@ -17,7 +17,7 @@ This stack has worked fairly well but I've been feeling quite a bit of friction 
 
 I also have some friction with Hasura. The first is the permissions system. Because permissions rules are written as json objects in the Hasura console they are essentially a source of vendor lock-in. Then there is the task of managing user authentication and storing files. Of course you're free to build those out yourself. But then you also have to host those services, and maintain them, and your brain starts to get tired.  [Nhost](https://nhost.io/) is a possible option here but I need to re-visit their offering in a future post.
 
-The final thing that makes me uncomfortable about Hasura is GraphQL subscriptions for realtime data. Behind the scences they are actually polling database queries once per second. This works, and they've coded up some magic to make it work really well, but for some reason it just really bothers me.
+The final thing that makes me uncomfortable about Hasura is GraphQL subscriptions for realtime data. Behind the scenes they are actually polling database queries once per second. This works, and they've coded up some magic to make it work really well, but for some reason it just really bothers me.
 
 I've been keeping my eye on [Supabase](https://supabase.com/) as a possible one size fits all backend that I can use for all my projects and therefore simplify my go-to technology stack down to this:
 
@@ -29,15 +29,15 @@ I've been heavily evaluating Supabase the past two weeks and feel like they have
 
 Here's the overall "things I want in a backend" checklist for Supabase:
 
-User Authentication - check
-Database - check + smiley face (Postgres is awesome)
-User Authorization - another big check for Postgres and RLS
-File Storage - check
-Realtime - check
-Portability (self hosting) - check
-Efficient Local Dev Workflow - check
-Functions - yes, finally, check
-Job Queues - ?
+- User Authentication - check
+- Database - check + smiley face (Postgres is awesome)
+- User Authorization - another big check for Postgres and RLS
+- File Storage - check
+- Realtime - check
+- Portability (self hosting) - check
+- Efficient Local Dev Workflow - check
+- Functions - yes, finally, check
+- Job Queues - ?
 
 Dang it. I hate having that last question mark there. Maybe I can rig something up with [Graphile Worker]https://worker.graphile.org/). Maybe I don't need a job queue and edge functions + webhooks will do the job.
 

@@ -36,7 +36,7 @@ import { pgTable, pgEnum, uuid, text, timestamp } from 'npm:drizzle-orm/pg-core'
 import { InferSelectModel } from 'npm:drizzle-orm';
 import postgres from 'npm:postgres'
 
-// Define schema for Dizzle. You can also use Drizzle Kit introspect to auto generate these : https://orm.drizzle.team/kit-docs/overview#introspecting-with-db-pull
+// Define schema for Drizzle. You can also use Drizzle Kit introspect to auto generate these : https://orm.drizzle.team/kit-docs/overview#introspecting-with-db-pull
 
 // Each alert has a type
 const alertTypeEnum = pgEnum("alert_type_enum", ['warning', 'info'])
@@ -44,10 +44,10 @@ const alertTypeEnum = pgEnum("alert_type_enum", ['warning', 'info'])
 // Each alert record looks like this 
 const alerts = pgTable('alerts', {
   id: uuid("id").defaultRandom().primaryKey().notNull(),
-	type: alertTypeEnum("type").notNull(),
+  type: alertTypeEnum("type").notNull(),
   message: text("message").notNull(),
-	url: text("url"),
-	createdAt: timestamp("created_at", { withTimezone: true, mode: 'string' }).notNull(),
+  url: text("url"),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: 'string' }).notNull(),
 })
 
 type Alert = InferSelectModel<typeof alerts>;
