@@ -74,6 +74,9 @@ input, select, textarea {
 
 #main.blog_post {
 	color: #000000;
+	img {
+		max-width: 100%;
+	}
 }
 
 /* Basic */
