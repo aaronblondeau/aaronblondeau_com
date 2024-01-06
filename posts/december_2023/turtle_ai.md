@@ -7,7 +7,7 @@ cover: /assets/images/turtle_ai_1.jpg
 date: 2023-12-23
 ---
 
-AI is getting really good at writing code. I've been using [GitHub Copilot](https://github.com/features/copilot) for several months now and it has dramatically boosted my productivity. At the same it has made me dramatically stupider. I've also nearly worn the tab key off my keyboard! I wonder what kind of intersection point there is between AI making you stupider vs more productive.
+AI is getting really good at writing code. I've been using [GitHub Copilot](https://github.com/features/copilot) for several months now and it has dramatically boosted my productivity. At the same time it has made me much stupider. I've also nearly worn the tab key off my keyboard! I wonder what kind of intersection point there is between AI making you stupider vs more productive.
 
 As I regress in my coding abilities due to my new AI habit I've started to think about how my coding career started and how it is all going to change now.
 The very first code I remember writing moved a "Turtle" across the screen to draw shapes. Can AI do what 12 year old Aaron did over 30 years ago?
