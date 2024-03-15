@@ -139,4 +139,4 @@ using (
 
 Now users have to be a member of the team!
 
-So, the moral of the story is **write tests** - you'll never regret it!
+So, the moral of the story is **write tests** - in the era of AI they are more essential than ever!
