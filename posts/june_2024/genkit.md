@@ -100,19 +100,19 @@ homeActor is an [XState](https://stately.ai/docs/xstate) finite state machine. I
 
 I won't go into all the other implementation details here, but here are the 3 most important things I learned in getting the project to work:
 
-1. Provide a tiered structure of flows and actions
+### 1) Provide a tiered structure of flows and actions
 
 Genkit automatically runs multiple tools in the right order when they are needed to execute a command. However I got quite a few errors when I attempted to have the same flow responsible for multiple jobs. I wound implementing a pattern where the first flow simply determines what type of command the user gave (lights vs thermostat). That high level flow can defer to a tool for each type of command. These tools in turn execute a sub-flow that is job specific. Here is what it looks like:
 
 ![Diagram of flows/actions](/assets/images/genkit-smarthome-workflow.png)
 
-2. Avoid system prompts
+### 2) Avoid system prompts
 
 The Genkit docs detail how to use system prompts here : https://firebase.google.com/docs/genkit/models
 
 As I am accustomed to using system prompts to give context to the llm I tried them first. However, gemini would return a response of "Understood" from each system prompt which threw off the chain of execution. So I stopped using system prompts and put all my context into each flow's main prompt. Other models are likely to behave differently.
 
-3. Avoid simple string schemas for inputs and outputs
+### 3) Avoid simple string schemas for inputs and outputs
 
 Most of my actions and flows simply return a single piece of data like "blue" so I originally setup my flows like this:
 
