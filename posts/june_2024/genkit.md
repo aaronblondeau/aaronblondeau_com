@@ -1,7 +1,7 @@
 ---
 layout: blog_post.njk
 tags: ['post', 'technology', 'ai']
-title: Simple AI Smart Home Manager 
+title: Simple AI Smart Home Manager
 teaser: Testing out the Firebase Genkit project
 date: 2024-06-12
 cover: /assets/images/genkit.jpg
