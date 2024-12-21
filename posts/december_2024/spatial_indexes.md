@@ -7,7 +7,7 @@ date: 2024-12-20
 cover: /assets/images/spatial_indexing.jpg
 ---
 
-I recently did an exercise in trying to build an app while pretending to be a minimalist. This required that I be able to filter gps points without using my tried and true friend PostGIS.
+I recently did an exercise in trying to build an app while pretending to be a minimalist. This required that I be able to filter gps points without using my tried and true friend [PostGIS](https://postgis.net/).
 
 I took a quick tour of the three most popular ways to index spatial data : [Geohash](https://www.npmjs.com/package/ngeohash), [H3](https://h3geo.org/), and [S2](http://s2geometry.io/).
 
