@@ -114,6 +114,7 @@ console.log('mt shavano cell at level 4 bounds', JSON.stringify(featureL4))
 ## S2
 
 ```JavaScript
+// This might be a better choice : https://www.npmjs.com/package/@radarlabs/s2
 import s2 from 'npm:s2-geometry'
 const S2 = s2.S2
 const lat = 38.618840
