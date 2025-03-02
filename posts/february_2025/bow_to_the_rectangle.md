@@ -42,4 +42,4 @@ I think that we as developers are going to need to find some innovative ways to 
 
 --
 
-[Cover Photo by Pixabay from Pexels](https://www.pexels.com/photo/grey-bullet-camera-274895/])
+[Cover Photo by Pixabay from Pexels](https://www.pexels.com/photo/grey-bullet-camera-274895/)
