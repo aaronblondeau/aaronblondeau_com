@@ -9,7 +9,7 @@ cover: /assets/images/pb_and_rn.png
 
 I have a bit of an obsession with finding the fastest way to launch apps. My goal is to be able to create fully functional MVP's and proofs of concept in less than a day. That means being able to spin up a backend and then implement a frontend as efficiently as possible. For the backend, [PocketBase](https://pocketbase.io/) has been my favorite lately. On the frontend I am still trying to find a winner. I like [Quasar](https://quasar.dev/) (VueJS + Capacitor) which is fantastic for web apps, but falls a bit short for mobile apps. I've been eyeing React Native lately especially since Expo offers a ton of great plugins like [Location](https://docs.expo.dev/versions/latest/sdk/location/) and also supports [remote updates](https://docs.expo.dev/versions/latest/sdk/updates/).
 
-Unfortunately I fell well short of being able to create a basic app in less than a day with these two. After clearing one big roadblock, however, I think you'll be able to move much quicker than I did on my first attempt.
+Unfortunately I fell well short of being able to create a basic app in less than a day with these two. After clearing a few roadblocks, however, I think you'll be able to move much quicker than I did on my first attempt.
 
 ## Broken File Attachments
 
