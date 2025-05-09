@@ -13,11 +13,11 @@ Unfortunately I fell well short of being able to create a basic app in less than
 
 ## Broken File Attachments
 
-Why is there always one critical thing that just doesn't work? For a PocketBase and React Native combo, that one thing is file attachments. The PocketBase SDK docs have some good examples of how you're supposed to be able to attach files to records : [https://pocketbase.io/docs/files-handling/](https://pocketbase.io/docs/files-handling/). This however does not work on React Native on mobile devices (it does work on React Native on web).
+Why is there always one critical thing that just doesn't work? For a PocketBase and React Native combo, that one thing is file attachments. The PocketBase SDK docs have some good examples of how you're supposed to be able to attach files to records : [https://pocketbase.io/docs/files-handling/](https://pocketbase.io/docs/files-handling/). This however does not work on React Native on mobile devices (it works fine on web).
 
 The issue has something to do with the way that React Native handles multipart form data on mobile devices. There is also possibly an issue with the way that PocketBase handles the attachments. When using the SDK with React Native, PocketBase will save the record, but then fail to process the attachment. This leaves you with an error on the client side as well as an incomplete record in the database. Double fail.
 
-I felt really smart when I decided to try and bypass the PocketBase SDK and use the REST API via fetch instead. That didn't work either! Whatever ReactNative does with the networking stack breaks things for fetch as well. So, here is how I wound up getting file attachments to work with an image provided by Expo's [ImagePicker](https://docs.expo.dev/versions/latest/sdk/imagepicker/):
+I felt really smart when I decided to try and bypass the PocketBase SDK and use the REST API via fetch instead, but that didn't work either! Whatever ReactNative does with the networking stack breaks things for fetch as well. So, here is how I wound up getting file attachments to work with an image provided by Expo's [ImagePicker](https://docs.expo.dev/versions/latest/sdk/imagepicker/):
 
 ```TypeScript
 // iOS doesn't provide fileName
@@ -95,3 +95,7 @@ const store = new AsyncAuthStore({
 
 export const pb = new PocketBase(pocketBaseUrl, store);
 ```
+
+## Conclusion
+
+Having waded through these two issues I now have a tech stack that allows for extremely fast app prototyping. However, I do not plan on using this in production anytime soon. Encountering issues like these are warnings that even larger show stoppers are still out there waiting to upend your project.

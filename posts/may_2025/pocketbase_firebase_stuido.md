@@ -7,7 +7,7 @@ date: 2025-05-07
 cover: /assets/images/pb_and_fs.png
 ---
 
-I needed an excuse to try out the new Firebase Studio so I decided to try and develop a PocketBase backend on it. It didn't work right out of the box, but it was fairly easy to get going.
+I needed an excuse to try out [Firebase Studio](https://firebase.studio/) so I decided to try and develop a PocketBase backend on it. It didn't work right out of the box, but it was fairly easy to get going.
 
 First, create a Go project in Firebase Studio.  Use "API server" as the environment.
 
@@ -17,13 +17,13 @@ At the time of writing this, the default version of Go in the environment is 1.2
 
 ![Screenshot showing output of "go version" which indicates go version is 1.21](/assets/images/firebase_studio_pocketbase_2.jpg)
 
-To get a newer version of Go, open up .idx/dev.nix for these images - nice!), and update the channel to "stable-24.11":
+To get a newer version of Go, open up .idx/dev.nix and update the channel to "stable-24.11":
 
 ```
 channel = "stable-24.11";
 ```
 
-I love that they are using [NixOS](https://nixos.org/) for these environments as it will make them very customizable.*
+*I love that they are using [NixOS](https://nixos.org/) for these environments as it will make them very customizable.*
 
 You should be prompted to rebuild the environment once you save this change.
 
@@ -33,7 +33,7 @@ Once the environment restarts, make sure you have Go 1.23+.
 
 ![Screenshot showing output of "go version" which indicates go version is now 1.23](/assets/images/firebase_studio_pocketbase_4.jpg)
 
-Your environment will have been setup to run your app via [Air](https://github.com/air-verse/air). You will need to customize air in order to run PocketBase.
+Your environment will have been setup to run your app via [Air](https://github.com/air-verse/air). You will need to customize Air in order to run PocketBase.
 
 Create an air.toml file by running this command in a terminal window:
 
@@ -53,17 +53,17 @@ Navigate to the terminal window that is running air.  It will be titled "\[onSta
 
 Once the server has stopped, replace the contents of main.go with the code found here : [https://pocketbase.io/docs/go-overview/](https://pocketbase.io/docs/go-overview/)
 
-Then in a terminal window run
+Then in a terminal window run:
 
 ```
 go mod tidy
 ```
 
-In the terminal window that was running air, use up arrow followed by enter to re-run the air command.
+In the terminal window that was running air, hit the up key followed by enter to re-run the air command.
 
 ![Screenshot showing air re-starting and building PocketBase via main.go](/assets/images/firebase_studio_pocketbase_6.jpg)
 
-You'll notice that the output provides the PocketBase superuser setup url. This url, however, uses http://127.0.0.1:8090 as the host name.
+You'll notice that the output provides the PocketBase superuser setup url. This url, however, uses http://127.0.0.1:8090 as the host name which you won't have access to.
 
 You'll need to replace the http://127.0.0.1:8090 with your project's public URL. To get this url, first click on the Firebase Studio icon in the left navigation bar. Then expand the "Backend Ports" section.
 
@@ -71,7 +71,7 @@ You'll need to replace the http://127.0.0.1:8090 with your project's public URL.
 
 Click on the lock next to port 8090 to make it publicly accessible.
 
-Then open the link from one of the buttons under "actions".
+Then open or copy the link from one of the buttons under "actions".
 
 After constructing the admin setup url it will look something like this:
 
