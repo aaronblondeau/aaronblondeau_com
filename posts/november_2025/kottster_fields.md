@@ -17,7 +17,7 @@ I also created a file uploader which sends files to S3:
 
 ![Screenshot of a photo uploader component in Kottster](/assets/images/photo_field_example.png)
 
-All of my code is here : [https://github.com/aaronblondeau/wookie-sightings](https://github.com/aaronblondeau/wookie-sightings).
+All of my code is here : [https://github.com/aaronblondeau/bigfoot-sightings](https://github.com/aaronblondeau/bigfoot-sightings).
 
 ## Here are the steps I followed to setup my development environment:
 
@@ -33,14 +33,14 @@ pnpm add -D drizzle-kit tsx
 3) I created a .env file with the path to my SQLite db.
 
 ```
-DB_FILE_NAME=file:wookie-sightings.db
+DB_FILE_NAME=file:bigfoot-sightings.db
 ```
 
-4) Following the drizzle config steps I created a schema.ts file: [https://github.com/aaronblondeau/wookie-sightings/blob/main/schema.ts](https://github.com/aaronblondeau/wookie-sightings/blob/main/schema.ts)
+4) Following the drizzle config steps I created a schema.ts file: [https://github.com/aaronblondeau/bigfoot-sightings/blob/main/schema.ts](https://github.com/aaronblondeau/bigfoot-sightings/blob/main/schema.ts)
 
 This schema has users and sightings (this is a demo app for bigfoot sightings)
 
-5) I created drizzle.config.ts : [https://github.com/aaronblondeau/wookie-sightings/blob/main/drizzle.config.ts](https://github.com/aaronblondeau/wookie-sightings/blob/main/drizzle.config.ts)
+5) I created drizzle.config.ts : [https://github.com/aaronblondeau/bigfoot-sightings/blob/main/drizzle.config.ts](https://github.com/aaronblondeau/bigfoot-sightings/blob/main/drizzle.config.ts)
 
 6) I ran drizzle push to create the database and schema that I would use with Kottster:
 
@@ -165,7 +165,7 @@ At first I was confused on how to find the key to use for the nested object, but
 
 3) Beware of extra React renders
 
-I noticed a bit of inconsistency in how props are provided to the custom component depending on whether the field was for a new row or an existing row. I had to do a little bit of juggling to setup state for my component : [https://github.com/aaronblondeau/wookie-sightings/blob/main/components/LocationEditor.tsx#L22](https://github.com/aaronblondeau/wookie-sightings/blob/main/components/LocationEditor.tsx#L22).
+I noticed a bit of inconsistency in how props are provided to the custom component depending on whether the field was for a new row or an existing row. I had to do a little bit of juggling to setup state for my component : [https://github.com/aaronblondeau/bigfoot-sightings/blob/main/components/LocationEditor.tsx#L22](https://github.com/aaronblondeau/bigfoot-sightings/blob/main/components/LocationEditor.tsx#L22).
 
 4) Use presigned file upload urls
 ---
@@ -177,7 +177,7 @@ date: 2025-11-08
 cover: /assets/images/kottster2.jpg
 ---
 
-I am not sure what Kottster is using for communication between the frontend and backend for procedure calls. I do know that I quickly ran into issues trying to handle file uploads. [See my notes in the FileUploader component.](https://github.com/aaronblondeau/wookie-sightings/blob/main/components/FileUploader.tsx#L45)
+I am not sure what Kottster is using for communication between the frontend and backend for procedure calls. I do know that I quickly ran into issues trying to handle file uploads. [See my notes in the FileUploader component.](https://github.com/aaronblondeau/bigfoot-sightings/blob/main/components/FileUploader.tsx#L45)
 
 To get around the procedure invocation limitations I wound up using a presigned upload URL to send files straight from the browser to S3. The getFileUploadUrl procedure generates the URL and then the FileUploader component uses fetch to send it straight to the bucket.
 
