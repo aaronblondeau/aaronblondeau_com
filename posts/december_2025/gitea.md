@@ -39,8 +39,6 @@ Gitea needs a database to store information. It can use a couple of different op
 I chose postgres. To run it I used a docker-compose.yml file that lives in it's own directory and looks like this.
 
 ```yaml
-version: '3'
-
 services:
   postgres:
     env_file:
@@ -112,8 +110,6 @@ exit
 For Gitea I also deployed the following docker-compose.yml file (which also lives in it's own directory on the host):
 
 ```yaml
-version: "3"
-
 services:
   server:
     image: gitea/gitea:latest
@@ -174,13 +170,15 @@ The first time you visit a Gitea instance it will guide you through setting up t
 
 I used the database name, user name, and password I setup in postgres for gitea.
 
-The only interesting config option I made was I had to use 172.17.0.1:5432 for the postgres host. 172.17.0.1 is sort of like the "localhost" for docker containers on linux.
+The only interesting config option I made was I had to use 172.17.0.1:5432 for the postgres host. 172.17.0.1 is sort of like the "localhost" for docker containers on linux. On mac and windows you can use host.docker.internal:5432 for the host.
+
+![Database configuration for Gitea](/assets/images/gitea_install.jpg)
 
 ## Using Gitea
 
 Gitea will be very familiar to GitHub users. You can create repos, clone, branch, commit, push, create PR's and so on. The only change I had to make was to make a small tweak to the ssh config on my laptop so that I could access repos via ssh.
 
-I added the following to my ~/.ssh/config file to make sure git used port 2222 when accessing my gitea host:
+I added the following to my ~/.ssh/config file to make sure git used port 2222 when accessing my gitea instance:
 
 ```
 # My Self Hosted Gitea
